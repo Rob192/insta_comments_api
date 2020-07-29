@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer, util
 
 class CommentFinder:
     def __init__(self):
-        embedder = SentenceTransformer('bert-base-nli-mean-tokens')
+        self.embedder = SentenceTransformer('bert-base-nli-mean-tokens')
 
         # Corpus with example sentences
         corpus = ['A man is eating food.',
@@ -21,7 +21,7 @@ class CommentFinder:
                   'A monkey is playing drums.',
                   'A cheetah is running behind its prey.'
                   ]
-        corpus_embeddings = self.embedder.encode(corpus, convert_to_tensor=True)
+        self.corpus_embeddings = self.embedder.encode(corpus, convert_to_tensor=True)
 
     def find_comment(self, query):
         query_embedding = self.embedder.encode(query, convert_to_tensor=True)
