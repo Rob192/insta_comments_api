@@ -11,7 +11,7 @@ class CommentFinder:
         self.embedder = SentenceTransformer('bert-base-nli-mean-tokens')
 
         # Corpus with example sentences
-        corpus = ['A man is eating food.',
+        self.corpus = ['A man is eating food.',
                   'A man is eating a piece of bread.',
                   'The girl is carrying a baby.',
                   'A man is riding a horse.',
@@ -21,7 +21,7 @@ class CommentFinder:
                   'A monkey is playing drums.',
                   'A cheetah is running behind its prey.'
                   ]
-        self.corpus_embeddings = self.embedder.encode(corpus, convert_to_tensor=True)
+        self.corpus_embeddings = self.embedder.encode(self.corpus, convert_to_tensor=True)
 
     def find_comment(self, query):
         query_embedding = self.embedder.encode(query, convert_to_tensor=True)

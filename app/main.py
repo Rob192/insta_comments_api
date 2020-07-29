@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from app.src.find_comment import CommentFinder
 
-app = FastAPI()
-
 commentFinder = CommentFinder()
+
+app = FastAPI()
 
 @app.get("/")
 async def give_sentence(sentence: str):
