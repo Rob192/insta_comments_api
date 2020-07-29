@@ -1,3 +1,3 @@
 from sentence_transformers import SentenceTransformer
 
-embedder = SentenceTransformer('bert-base-nli-mean-tokens')
+embedder = SentenceTransformer('distiluse-base-multilingual-cased')
