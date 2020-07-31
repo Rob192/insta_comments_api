@@ -60,7 +60,7 @@ class CommentFinder:
         idx, score = results[0]
         print(self.corpus[idx].strip(), "(Score: %.4f)" % (score))
         # TODO : only return this if score is above certain threshold
-        return {'comment': self.corpus[idx].strip(), 'score': score}
+        return {'comment': self.corpus[idx].strip(), 'score': float(score)}
 
 
 if __name__ == '__main__':
