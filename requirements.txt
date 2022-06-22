@@ -21,7 +21,7 @@ Jinja2==2.11.2
 joblib==0.16.0
 MarkupSafe==1.1.1
 nltk==3.5
-numpy==1.19.1
+numpy==1.22.0
 orjson==3.3.0
 packaging==20.4
 promise==2.3
